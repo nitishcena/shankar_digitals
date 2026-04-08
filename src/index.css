@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 96%;
+    --foreground: 30 10% 12%;
+
+    --card: 40 15% 98%;
+    --card-foreground: 30 10% 12%;
+
+    --popover: 40 15% 98%;
+    --popover-foreground: 30 10% 12%;
+
+    --primary: 30 10% 12%;
+    --primary-foreground: 40 20% 96%;
+
+    --secondary: 35 15% 92%;
+    --secondary-foreground: 30 10% 20%;
+
+    --muted: 35 10% 90%;
+    --muted-foreground: 30 5% 45%;
+
+    --accent: 30 50% 45%;
+    --accent-foreground: 40 20% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 30 10% 12%;
+
+    --radius: 0.5rem;
+
+    --gold: 35 65% 50%;
+    --gold-light: 35 50% 75%;
+    --warm-white: 40 30% 97%;
+    --warm-gray: 35 8% 60%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-center mb-10 md:mb-16;
+  }
+  .section-heading h2 {
+    @apply font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight;
+  }
+  .section-heading p {
+    @apply text-xs sm:text-sm font-medium uppercase tracking-[0.2em] sm:tracking-[0.25em] text-accent mt-0 mb-2 sm:mb-3;
+  }
+  .section-heading .divider {
+    @apply w-10 sm:w-12 h-[2px] bg-accent mx-auto mt-3 sm:mt-4;
+  }
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 sm:py-20 md:px-12 md:py-24 lg:px-20 xl:px-32;
+  }
+  .glass-card {
+    @apply bg-card border border-border/60 shadow-sm hover:shadow-xl transition-all duration-500;
+  }
+  .photo-frame {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  .photo-frame img {
+    @apply w-full h-full object-cover transition-transform ease-out;
+    transition-duration: 1.2s;
+  }
+  .photo-frame:hover img {
+    transform: scale(1.1);
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(35 65% 50%), hsl(35 50% 65%));
+  }
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(40 20% 96%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(30 10% 70%);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(30 10% 50%);
+}
