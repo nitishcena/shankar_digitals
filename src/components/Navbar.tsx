@@ -21,13 +21,11 @@ const Navbar = () => {
   }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.replace("#", "");
-    const elem = document.getElementById(targetId);
-    if (elem) {
-      elem.scrollIntoView({ behavior: "smooth" });
-    }
-    setMobileOpen(false);
+    // Rely on native browser anchor jump for reliability across mobile OSs
+    // but ensure the mobile menu closes after a micro-delay to prevent interruption.
+    setTimeout(() => {
+      setMobileOpen(false);
+    }, 50);
   };
 
   return (

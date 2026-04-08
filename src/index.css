@@ -110,6 +110,7 @@
 /* Smooth scroll for anchor links */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 /* Custom scrollbar */
