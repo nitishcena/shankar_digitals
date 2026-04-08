@@ -20,6 +20,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const elem = document.getElementById(targetId);
+    if (elem) {
+      elem.scrollIntoView({ behavior: "smooth" });
+    }
+    setMobileOpen(false);
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -34,17 +44,19 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-5 flex items-center justify-between">
         <motion.a
           href="#home"
+          onClick={(e) => handleNavClick(e, "#home")}
           whileHover={{ scale: 1.02 }}
           className="font-heading text-lg sm:text-xl font-bold tracking-wider text-foreground uppercase"
         >
           Sri Shankar <span className="font-body text-[10px] sm:text-xs font-light tracking-[0.3em] text-muted-foreground ml-1">DIGITALS</span>
         </motion.a>
-
+ 
         <div className="hidden lg:flex items-center gap-8 xl:gap-10">
           {navLinks.map((link, i) => (
             <motion.a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * i, duration: 0.5 }}
@@ -54,7 +66,7 @@ const Navbar = () => {
             </motion.a>
           ))}
         </div>
-
+ 
         <motion.a
           href="tel:+919448757499"
           whileHover={{ scale: 1.05 }}
@@ -63,12 +75,12 @@ const Navbar = () => {
         >
           Call Now
         </motion.a>
-
+ 
         <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden text-foreground p-1">
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
-
+ 
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -83,7 +95,7 @@ const Navbar = () => {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 * i }}
