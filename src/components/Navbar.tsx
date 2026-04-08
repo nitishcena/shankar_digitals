@@ -37,7 +37,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.02 }}
           className="font-heading text-lg sm:text-xl font-bold tracking-wider text-foreground uppercase"
         >
-          Shankar <span className="font-body text-[10px] sm:text-xs font-light tracking-[0.3em] text-muted-foreground ml-1">DIGITALS</span>
+          Sri Shankar <span className="font-body text-[10px] sm:text-xs font-light tracking-[0.3em] text-muted-foreground ml-1">DIGITALS</span>
         </motion.a>
 
         <div className="hidden lg:flex items-center gap-8 xl:gap-10">

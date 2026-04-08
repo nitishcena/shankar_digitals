@@ -42,7 +42,7 @@ const HeroSection = () => {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="mb-6 sm:mb-8 md:mb-10"
         >
-          <img src={logoImg} alt="Shri Shankar Digitals" className="mx-auto w-40 sm:w-52 md:w-64 lg:w-72 drop-shadow-lg" />
+          <img src={logoImg} alt="Sri Shankar Digitals" className="mx-auto w-40 sm:w-52 md:w-64 lg:w-72 drop-shadow-lg" />
         </motion.div>
 
         {/* Main heading */}

@@ -115,10 +115,13 @@ const ContactSection = () => {
                 <MessageCircle className="w-4 h-4" style={{ color: "hsl(142 70% 45%)" }} />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://www.instagram.com/sri_shankar_digitals/"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.15, y: -2 }}
                 whileTap={{ scale: 0.9 }}
                 className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-all duration-300"
+                title="Instagram"
               >
                 <Instagram className="w-4 h-4 text-accent" />
               </motion.a>

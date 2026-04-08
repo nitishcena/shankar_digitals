@@ -29,7 +29,7 @@ const AboutSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-xs sm:text-sm text-muted-foreground leading-[1.8]"
           >
-            Shri Shankar Digitals is a premier photography studio and digital services center in the heart of Raichur, Karnataka. We are renowned for delivering unmatched quality through innovative products and services, blending advanced technology with elegant, creative design.
+            Sri Shankar Digitals is a premier photography studio and digital services center in the heart of Raichur, Karnataka. We are renowned for delivering unmatched quality through innovative products and services, blending advanced technology with elegant, creative design.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 30 }}

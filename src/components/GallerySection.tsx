@@ -8,7 +8,7 @@ import framesDisplay from "@/assets/frames-display.png";
 import storefront from "@/assets/storefront.png";
 
 const images = [
-  { src: storefront, alt: "Shri Shankar Digitals Storefront", aspect: "row-span-2" },
+  { src: storefront, alt: "Sri Shankar Digitals Storefront", aspect: "row-span-2" },
   { src: workspace, alt: "Professional Workspace", aspect: "" },
   { src: galleryFrames, alt: "Photo Frames Collection", aspect: "" },
   { src: giftsDisplay, alt: "Personalized Gifts Display", aspect: "" },
